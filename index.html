@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build Buddy - AI Project Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🔨 Build Buddy</h1>
+            <p class="subtitle">Show me what you have, and I'll help you build something amazing</p>
+        </header>
+
+        <main class="main-content">
+            <!-- Input Section -->
+            <section class="input-section">
+                <div class="image-upload-area">
+                    <input type="file" id="imageInput" accept="image/*" hidden>
+                    <button class="upload-btn" id="uploadBtn">
+                        📸 Upload Image
+                    </button>
+                    <div id="imagePreview" class="image-preview"></div>
+                </div>
+
+                <div class="context-area">
+                    <textarea id="contextInput" placeholder="Add context about these items (e.g., 'I have wood scraps, nails, and old tools in my garage')" class="context-input"></textarea>
+                    <button id="analyzeBtn" class="analyze-btn">Analyze & Get Ideas</button>
+                </div>
+            </section>
+
+            <!-- Loading State -->
+            <div id="loadingState" class="loading-state hidden">
+                <div class="spinner"></div>
+                <p>Analyzing your items and generating project ideas...</p>
+            </div>
+
+            <!-- Results Section -->
+            <section id="resultsSection" class="results-section hidden">
+                <!-- Project Ideas -->
+                <div id="ideasContainer" class="ideas-container"></div>
+
+                <!-- Selected Project Guide -->
+                <div id="guideContainer" class="guide-container hidden">
+                    <button id="backBtn" class="back-btn">← Back to Ideas</button>
+                    <div id="guideContent" class="guide-content"></div>
+                </div>
+            </section>
+
+            <!-- Conversation History -->
+            <section id="conversationSection" class="conversation-section hidden">
+                <h2>Project Conversation</h2>
+                <div id="conversationHistory" class="conversation-history"></div>
+            </section>
+        </main>
+    </div>
+
+    <script type="module" src="script.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
+
